@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Basic Calculator</string>
+    <string name="number_2">Number 2</string>
+    <string name="operator">Operator</string>
+    <string name="output">OUTPUT</string>
+    <string name="calculate">Calculate</string>
+    <string name="number_1">Number 1</string>
+    <string name="warning">Invalid Input!!!</string>
+</resources>
