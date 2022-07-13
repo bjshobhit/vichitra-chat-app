@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Arrays;
+import java.util.concurrent.Delayed;
+import java.util.concurrent.TimeUnit;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 //    Function Calls whenever user taps within the grid
 
-    public void playerTap(View view){
+    public void playerTap(View view) throws InterruptedException {
         ImageView img = (ImageView) view;
         int tappedImage = Integer.parseInt(img.getTag().toString());
         if (!gameActive){
@@ -90,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                 TextView status = findViewById(R.id.status);
                 status.setText(winnerstr);
 
+
+
             }
 
 
@@ -100,7 +104,14 @@ public class MainActivity extends AppCompatActivity {
             gameActive=false;
             TextView status = findViewById(R.id.status);
             status.setText("Match Draw!! Play Again");
+
         }
+        if (counter==100`]
+        || flag==1){
+            Thread.sleep(1000);
+            gameReset(view);
+        }
+
 
     }
     // Reset the game
@@ -119,8 +130,8 @@ public class MainActivity extends AppCompatActivity {
         ((ImageView) findViewById(R.id.imageView7)).setImageResource(0);
         ((ImageView) findViewById(R.id.imageView8)).setImageResource(0);
 
-        TextView status = findViewById(R.id.status);
-        status.setText("X's Turn - Tap to play");
+//        TextView status = findViewById(R.id.status);
+//        status.setText("X's Turn - Tap to play");
     }
 
 
